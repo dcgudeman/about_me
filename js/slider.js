@@ -42,8 +42,4 @@ $(function(){//this makes sure the javascript is run after the page loads
 	});
 
 
-
-
-
-
 });

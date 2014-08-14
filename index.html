@@ -2,12 +2,55 @@
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
 	<script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/slider.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/slider.css">
-
 	<title>David Gudeman</title>
+	<script>
+	$(function(){//this makes sure the javascript is run after the page loads
 
+
+
+		$('.slide-viewer').each(function(){ //calls this on every image slide-viewer but we only have one
+			var $this = $(this);//makes a variable for the slide-viewer we are working on
+			var $group = $this.find('.slide-group');//
+			var $slides = $this.find('.slide');
+			var buttonArray = [];
+			var currentIndex = 0;
+
+
+
+			function changeSlide(buttonIndex) {
+				buttonArray[currentIndex].removeClass('active');//removes active from button
+				currentIndex = buttonIndex;//reassigns the current index
+				$slides.each(function(slideIndex) {
+					if (buttonIndex === slideIndex) {
+						$(this).show(); //'this' is refering to the particular slide we are on as we cycle through all the slides
+						
+					} else {
+						$(this).hide();
+					}
+				});
+				buttonArray[currentIndex].addClass('active');//adds active to the correct button
+			}
+
+
+			$slides.each(function(index){
+				//Create a button element for the button
+				var $button = $('<button type="button" class="slide-btn">&bull;</button>');
+				if (index === currentIndex) {
+					$button.addClass('active');//Makes the first button active
+				}
+				$button.on('click', function() {
+					changeSlide(index);
+				});
+
+				$button.appendTo('.slide-buttons');//puts the buttons in the correct div
+				buttonArray.push($button)//adds the current button to the array
+			});
+		});
+
+
+	});
+	</script>
 </head>
 <body>
 
@@ -17,36 +60,28 @@
 	</header>
 
 	<div class='two'>
-		<p class='caption'>This is a caption</p>
+		<p class='caption'>Can you spot the GA alumn?</p>
 	</div>
-	<!--<img class='two' src="group.jpg" />-->
-	
+
 	<div class='middleColumn'>
 		<img class='one' src="images/me.jpg" alt="me" />
-		<p> Hello I have made some changes. Can you see this? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices pretium gravida. Donec nec ullamcorper ipsum, sit amet congue massa. Quisque pharetra, augue non blandit lacinia, est tellus convallis mauris, et suscipit tellus lorem ut dui. Ut quis pharetra mi, bibendum malesuada elit. Donec eleifend hendrerit lacinia. Ut sit amet nunc vehicula, ultricies nunc sollicitudin, tempor metus. In laoreet risus justo, vitae placerat leo sagittis eget. Pellentesque bibendum nibh at tortor rhoncus, et tincidunt est placerat. Vestibulum scelerisque vestibulum nisl non vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque odio dui, tempor dapibus risus non, auctor varius orci.</p>
-	<div class="slide-viewer">
-		<div class="slide-group">
-			<div class="slide slide1"><img class="pix" src="images/barcelona1.jpg" alt="First"></div>
-			<div class="slide slide2"><img class="pix" src="images/barcelona7.jpg" alt="Second"></div>
-			<div class="slide slide3"><img class="pix" src="images/barcelona5.jpg" alt="Second"></div>
-			<div class="slide slide4"><img class="pix" src="images/barcelona3.jpg" alt="Third"></div>
+		<p>Born and raised in SoCal. Studied chemistry at UCLA. Got to do research on super hard materials (like the stuff the new Iphone screen will be made of!) and colliodal quantum dots. Managed a medical practice with a staff of 12 and over 1,200 patients. Moved to Silicon Valley to start a company. Made some progess but not enough. In the process I made fiends with a lot of cool people. Now I am looking to join a start up as a developer.</p>
+		<p>Lover of technology, entreprenuership and traveling!<br>(see Barcelona picture below)</p>
+		<p>You can reach me at:<br><br>1001 Hamilton Ave<br>Palo Alto, CA 94301<br>dcgudeman[at]gmail.com<br>(805) 405-3976</p>
+		<div class="slide-viewer">
+			<div class="slide-group">
+				<div class="slide slide1"><img class="pix" src="images/barcelona1.jpg" alt="First"></div>
+				<div class="slide slide2"><img class="pix" src="images/barcelona7.jpg" alt="Second"></div>
+				<div class="slide slide3"><img class="pix" src="images/barcelona5.jpg" alt="Second"></div>
+				<div class="slide slide4"><img class="pix" src="images/barcelona3.jpg" alt="Third"></div>
+			</div>
 		</div>
-	</div>
-	<div class="slide-buttons"></div>
-
+		<div class="slide-buttons"></div>
 	</div>
 
 	<div class='three'>
-		<p class='caption'>This is a caption</p>
+		<p class='caption'>Bruin pride!</p>
 	</div>
-
-
-
-
-
-	<script>
-
-	</script>
 
 </body>
 </html>
