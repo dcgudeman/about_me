@@ -1,88 +1,86 @@
 
 header {
-	position: relative;
-	height: 100px;
-	box-shadow: 0px 0px 8px #888888;
-	margin: -50px -10px 50px -10px;
-	padding: 40px 0 0 20px;
-	background: #F4FFFA;
-	z-index: 1;
+    position: relative;
+    height: 100px;
+    box-shadow: 0px 0px 8px #888888;
+    margin: -50px -10px 50px -10px;
+    padding: 40px 0 0 20px;
+    background: #F4FFFA;
+    z-index: 1;
 }
 
 body {
-	background: #FFF4DD;
+    background: #FFF4DD;
 }
 
 h1, p {
-	font-family: 'Quando', serif;
+    font-family: 'Quando', serif;
 }
 
 small {
-	font-size: 19px;
+    font-size: 19px;
 }
 
 .one {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
 }
 
 .two {
-	background-image: url("../images/group.jpg");
-	height: 300px;
-	width: 400px;
-	background-size: cover;
-	position: absolute;
-	right:10px;
-	z-index: 2;
-	margin-top: -140px;
+    background-image: url("../images/group.jpg");
+    height: 300px;
+    width: 400px;
+    background-size: cover;
+    position: absolute;
+    right:10px;
+    z-index: 2;
+    margin-top: -140px;
 }
 
 .three{
-	background-image: url("../images/graduation.jpg");
-	height: 390px;
-	width: 300px;
-	background-size: cover;
-	position: relative;
-	left: 10px;
-	bottom: 10px;
-	z-index: 2;
+    background-image: url("../images/graduation.jpg");
+    height: 390px;
+    width: 300px;
+    background-size: cover;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+    z-index: 2;
 }
 
 .middleColumn {
-	background: white;
-	max-width: 600px;
-	padding:80px;
-	margin-top: -80px;
-	margin-left: auto;
-	margin-right: auto;
-	box-shadow: 0px 0px 8px #888888;
-	text-align: justify;
+    background: white;
+    max-width: 600px;
+    padding:80px;
+    margin-top: -80px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 8px #888888;
+    text-align: justify;
 }
 
 .pix {
-	max-width: 400px;
+    max-width: 400px;
 }
 
 .caption {
-	position: absolute;
-	bottom: -16px;
-	width: 100%;
-	color: #FAFAFA;
-	background: #323232;
-	text-align: center;
-	padding-top: 8px;
-	height: 30px;
-	
+    position: absolute;
+    bottom: -16px;
+    width: 100%;
+    color: #FAFAFA;
+    background: #323232;
+    text-align: center;
+    padding-top: 8px;
+    height: 30px;
+    
 }
 
-
-/*************************************/
 .slide-viewer {
-	position: relative;
-	overflow: hidden;
-	height: 300px;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -90,25 +88,25 @@ small {
 }
 
 .slide-group {
-	width: 100%;
-	height: 100%;
-	position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .slide {
-	width:100%;
-	height:100%;
-	display: none;
-	position: relative;
+    width:100%;
+    height:100%;
+    display: none;
+    position: relative;
 }
 
 /* This makes sure the first picture appears*/
 .slide:first-child {
-	display:block;
+    display:block;
 }
 
 .slide-buttons {
-	position: relative;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     height: 10px;
@@ -117,17 +115,17 @@ small {
 
 
 .slide-btn {
-	font-size: 30px;
-	color: #9494B8;
-	background: transparent;
-	border: 0;
-	outline: none;
-	vertical-align: middle;
+    font-size: 30px;
+    color: #9494B8;
+    background: transparent;
+    border: 0;
+    outline: none;
+    vertical-align: middle;
 }
 
 .slide-btn.active {
-	font-size: 50px;
-	color: #666699;
+    font-size: 50px;
+    color: #666699;
 }
 
 
